@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "785442253936",
+    "project_id": "hostelpass-9ba9c",
+    "storage_bucket": "hostelpass-9ba9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785442253936:android:655b0eeb3fceee738d98b5",
+        "android_client_info": {
+          "package_name": "com.example.mad_project_24012011013"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_akn3jyHJDY0JnsJZVc5nrts6Oih2Sto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

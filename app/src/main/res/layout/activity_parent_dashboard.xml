@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvParentWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Parent 👋"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvChildName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Child: "
+        android:textSize="18sp"
+        android:paddingBottom="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnParentGatePasses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gate Pass Requests" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnParentHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gate Pass History" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnParentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Profile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnParentLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+</LinearLayout>
