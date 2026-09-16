@@ -6,6 +6,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.firestore.FirebaseFirestore
+import android.graphics.Bitmap
+import android.widget.ImageView
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.MultiFormatWriter
 
 class GatePassDetailsActivity : AppCompatActivity() {
 
@@ -46,6 +50,8 @@ class GatePassDetailsActivity : AppCompatActivity() {
 
         val btnBack =
             findViewById<MaterialButton>(R.id.btnBack)
+
+        val imgQrCode = findViewById<ImageView>(R.id.imgQrCode)
 
         // Get Firestore document ID
         val gatePassId =
@@ -138,6 +144,43 @@ class GatePassDetailsActivity : AppCompatActivity() {
 
                     tvStatus.text =
                         "Status: $status"
+                    if (status == "APPROVED") {
+
+                        imgQrCode.visibility = ImageView.VISIBLE
+
+                        val qrData = gatePassId
+
+                        val bitMatrix = MultiFormatWriter().encode(
+                            qrData,
+                            BarcodeFormat.QR_CODE,
+                            600,
+                            600
+                        )
+
+                        val bitmap = Bitmap.createBitmap(
+                            600,
+                            600,
+                            Bitmap.Config.RGB_565
+                        )
+
+                        for (x in 0 until 600) {
+                            for (y in 0 until 600) {
+                                bitmap.setPixel(
+                                    x,
+                                    y,
+                                    if (bitMatrix[x, y])
+                                        android.graphics.Color.BLACK
+                                    else
+                                        android.graphics.Color.WHITE
+                                )
+                            }
+                        }
+
+                        imgQrCode.setImageBitmap(bitmap)
+
+                    } else {
+                        imgQrCode.visibility = ImageView.GONE
+                    }
 
                 } else {
 

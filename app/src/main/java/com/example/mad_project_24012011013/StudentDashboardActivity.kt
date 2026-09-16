@@ -94,11 +94,12 @@ class StudentDashboardActivity : AppCompatActivity() {
 
 
         btnHistory.setOnClickListener {
-            Toast.makeText(
-                this,
-                "Gate Pass History will be added later",
-                Toast.LENGTH_SHORT
-            ).show()
+            startActivity(
+                Intent(
+                    this,
+                    StudentHistoryActivity::class.java
+                )
+            )
         }
 
         btnProfile.setOnClickListener {

@@ -114,12 +114,11 @@ class ParentDashboardActivity : AppCompatActivity() {
         }
 
         btnParentHistory.setOnClickListener {
-
-            Toast.makeText(
+            val intent = Intent(
                 this,
-                "Gate Pass History will be added later",
-                Toast.LENGTH_SHORT
-            ).show()
+                ParentHistoryActivity::class.java
+            )
+            startActivity(intent)
         }
 
         btnParentProfile.setOnClickListener {

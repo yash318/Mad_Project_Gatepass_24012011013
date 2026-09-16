@@ -109,7 +109,11 @@ class MainActivity : AppCompatActivity() {
                 if (document.exists()) {
 
                     val role = document.getString("role")
-
+                    Toast.makeText(
+                        this,
+                        "UID = [$userId]\nRole = [$role]",
+                        Toast.LENGTH_LONG
+                    ).show()
                     when (role) {
 
                         "student" -> {
@@ -119,14 +123,17 @@ class MainActivity : AppCompatActivity() {
                         "parent" -> {
                             openParentDashboard()
                         }
-
+                        "rector" -> {
+                            openRectorDashboard()
+                        }
+                        "security" -> {
+                            openSecurityDashboard()
+                        }
+                        "admin" -> {
+                            openAdminDashboard()
+                        }
                         else -> {
-                            Toast.makeText(
-                                this,
-                                "Invalid user role",
-                                Toast.LENGTH_LONG
-                            ).show()
-
+                            Toast.makeText(this, "Invalid user role", Toast.LENGTH_LONG).show()
                             auth.signOut()
                         }
                     }
@@ -173,6 +180,37 @@ class MainActivity : AppCompatActivity() {
             this,
             ParentDashboardActivity::class.java
         )
+
+        intent.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+        startActivity(intent)
+        finish()
+    }
+    private fun openRectorDashboard() {
+        val intent = Intent(
+            this,
+            RectorDashboardActivity::class.java
+        )
+
+        intent.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+        startActivity(intent)
+        finish()
+    }
+    private fun openSecurityDashboard() {
+        val intent = Intent(this, SecurityDashboardActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
+    }
+    private fun openAdminDashboard() {
+
+        val intent =
+            Intent(this, AdminDashboardActivity::class.java)
 
         intent.flags =
             Intent.FLAG_ACTIVITY_NEW_TASK or
