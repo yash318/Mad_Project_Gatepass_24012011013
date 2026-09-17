@@ -1,49 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="#F5F7FA"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvParentWelcome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome, Parent 👋"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:paddingBottom="8dp" />
+        android:orientation="vertical"
+        android:padding="22dp">
 
-    <TextView
-        android:id="@+id/tvChildName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Child: "
-        android:textSize="18sp"
-        android:paddingBottom="20dp" />
+        <TextView
+            android:id="@+id/tvParentWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Parent 👋"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#101828"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnParentGatePasses"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gate Pass Requests" />
+        <TextView
+            android:id="@+id/tvChildName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Child: "
+            android:textSize="17sp"
+            android:textColor="#1565C0"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnParentHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gate Pass History" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnParentProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My Profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnParentLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Gate Passes"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
 
-</LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Review and approve your child's requests"
+                    android:textColor="#667085"
+                    android:layout_marginTop="5dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnParentGatePasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Gate Pass Requests"
+                    android:layout_marginTop="14dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnParentHistory"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Gate Pass History"
+            android:layout_marginTop="14dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnParentProfile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="My Profile"
+            android:layout_marginTop="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnParentLogout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Logout"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
