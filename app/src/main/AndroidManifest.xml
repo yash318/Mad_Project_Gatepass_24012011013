@@ -11,96 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mad_Project_24012011013">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+        <activity android:name=".MainActivity" android:exported="true" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".StudentDashboardActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".StudentProfileActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ApplyGatePassActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".MyGatePassesActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".GatePassDetailsActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ParentDashboardActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ParentGatePassesActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".RectorDashboardActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".RectorGatePassesActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".RectorProfileActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".RectorHistoryActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ParentHistoryActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".SecurityDashboardActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".QrScannerActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ScannedGatePassActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".SecurityHistoryActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".SecurityProfileActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AdminDashboardActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".StudentHistoryActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SignupActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StudentDashboardActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StudentProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ApplyGatePassActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MyGatePassesActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".GatePassDetailsActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ParentDashboardActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ParentGatePassesActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ParentHistoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".RectorDashboardActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".RectorGatePassesActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".RectorProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".RectorHistoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SecurityDashboardActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".QrScannerActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ScannedGatePassActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SecurityHistoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SecurityProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".StudentHistoryActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".AdminUsersActivity" android:exported="false" />
+        <activity android:name=".AdminGatePassesActivity" android:exported="false" />
     </application>
-
 </manifest>
