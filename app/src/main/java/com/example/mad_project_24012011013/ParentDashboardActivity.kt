@@ -21,165 +21,79 @@ class ParentDashboardActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        val tvParentWelcome =
-            findViewById<TextView>(R.id.tvParentWelcome)
-
-        val tvChildName =
-            findViewById<TextView>(R.id.tvChildName)
-
-        val btnParentGatePasses =
-            findViewById<MaterialButton>(R.id.btnParentGatePasses)
-
-        val btnParentHistory =
-            findViewById<MaterialButton>(R.id.btnParentHistory)
-
-        val btnParentProfile =
-            findViewById<MaterialButton>(R.id.btnParentProfile)
-
-        val btnParentLogout =
-            findViewById<MaterialButton>(R.id.btnParentLogout)
+        val tvParentWelcome = findViewById<TextView>(R.id.tvParentWelcome)
+        val tvChildName = findViewById<TextView>(R.id.tvChildName)
+        val btnParentGatePasses = findViewById<MaterialButton>(R.id.btnParentGatePasses)
+        val btnParentHistory = findViewById<MaterialButton>(R.id.btnParentHistory)
+        val btnParentProfile = findViewById<MaterialButton>(R.id.btnParentProfile)
+        val btnParentLogout = findViewById<MaterialButton>(R.id.btnParentLogout)
 
         val currentUser = auth.currentUser
 
         if (currentUser == null) {
-            Toast.makeText(
-                this,
-                "Please login again",
-                Toast.LENGTH_SHORT
-            ).show()
-
+            Toast.makeText(this, "Please login again", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
 
         val parentId = currentUser.uid
 
-        // Load parent profile
-        db.collection("users")
-            .document(parentId)
-            .get()
+        db.collection("users").document(parentId).get()
             .addOnSuccessListener { document ->
-
                 if (document.exists()) {
+                    val parentName = document.getString("name") ?: "Parent"
+                    val childId = document.getString("childId") ?: ""
 
-                    val parentName =
-                        document.getString("name") ?: "Parent"
+                    tvParentWelcome.text = "Welcome, $parentName 👋"
 
-                    val childId =
-                        document.getString("childId") ?: ""
-
-                    tvParentWelcome.text =
-                        "Welcome, $parentName 👋"
-
-                    // Load child information
                     if (childId.isNotEmpty()) {
-
-                        loadChildInformation(
-                            childId,
-                            tvChildName
-                        )
-
+                        loadChildInformation(childId, tvChildName)
                     } else {
-
-                        tvChildName.text =
-                            "Child: Not linked yet"
+                        tvChildName.text = "Child: Not linked yet"
                     }
-
                 } else {
-
-                    Toast.makeText(
-                        this,
-                        "Parent profile not found",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Parent profile not found", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener {
-
-                Toast.makeText(
-                    this,
-                    "Unable to load parent profile",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, "Unable to load parent profile", Toast.LENGTH_SHORT).show()
             }
 
         btnParentGatePasses.setOnClickListener {
-
-            val intent = Intent(
-                this,
-                ParentGatePassesActivity::class.java
-            )
-
-            startActivity(intent)
+            startActivity(Intent(this, ParentGatePassesActivity::class.java))
         }
 
         btnParentHistory.setOnClickListener {
-            val intent = Intent(
-                this,
-                ParentHistoryActivity::class.java
-            )
-            startActivity(intent)
+            startActivity(Intent(this, ParentHistoryActivity::class.java))
         }
 
         btnParentProfile.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Parent Profile will be added later",
-                Toast.LENGTH_SHORT
-            ).show()
+            startActivity(Intent(this, ParentProfileActivity::class.java))
         }
 
         btnParentLogout.setOnClickListener {
-
             auth.signOut()
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
 
-            Toast.makeText(
-                this,
-                "Logged out successfully",
-                Toast.LENGTH_SHORT
-            ).show()
-
-            val intent =
-                Intent(this, MainActivity::class.java)
-
-            intent.flags =
-                Intent.FLAG_ACTIVITY_NEW_TASK or
-                        Intent.FLAG_ACTIVITY_CLEAR_TASK
-
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
     }
 
-    private fun loadChildInformation(
-        childId: String,
-        tvChildName: TextView
-    ) {
-
-        db.collection("users")
-            .document(childId)
-            .get()
+    private fun loadChildInformation(childId: String, tvChildName: TextView) {
+        db.collection("users").document(childId).get()
             .addOnSuccessListener { document ->
-
                 if (document.exists()) {
-
-                    val childName =
-                        document.getString("name") ?: ""
-
-                    tvChildName.text =
-                        "Child: $childName"
-
+                    val childName = document.getString("name") ?: ""
+                    tvChildName.text = "Child: $childName"
                 } else {
-
-                    tvChildName.text =
-                        "Child: Profile not found"
+                    tvChildName.text = "Child: Profile not found"
                 }
             }
             .addOnFailureListener {
-
-                tvChildName.text =
-                    "Child: Unable to load"
+                tvChildName.text = "Child: Unable to load"
             }
     }
 }
