@@ -1,88 +1,95 @@
-[HostelPass README.md](https://github.com/user-attachments/files/32309102/HostelPass.README.md)
-# 🏨 HostelPass — Smart Hostel Gate Pass Management System
+# 🏨 HostelPass --- Smart Hostel Gate Pass Management System
 
 ## 📱 About the Project
 
-**HostelPass** is an Android-based **Smart Hostel Gate Pass Management System** developed using **Kotlin, XML, Firebase Authentication, and Cloud Firestore**.
+**HostelPass** is an Android-based **Smart Hostel Gate Pass Management
+System** developed using **Kotlin, XML, Firebase Authentication, and
+Cloud Firestore**.
 
-The application helps hostels manage student gate passes digitally. Students can apply for gate passes, parents and rectors can approve or reject requests, and security guards can verify student entry and exit using a **QR Code**.
+The application helps hostels manage student gate passes digitally.
+Students can apply for gate passes, parents and rectors can approve or
+reject requests, and security guards can verify student entry and exit
+using a **QR Code**.
 
----
+------------------------------------------------------------------------
 
 ## 🎯 Aim
 
-To develop a smart and secure hostel gate pass management system that reduces manual paperwork and provides better communication between **students, parents, rectors, and security guards**.
+To develop a smart and secure hostel gate pass management system that
+reduces manual paperwork and provides better communication between
+**students, parents, rectors, and security guards**.
 
----
+------------------------------------------------------------------------
 
 ## ✨ Features
 
 ### 👨‍🎓 Student
 
-- Student registration and login
-- View personal profile
-- Apply for a gate pass
-- Enter:
-  - Exit date and time
-  - Return date and time
-  - Place
-  - Reason
-  - Description
-- View submitted gate passes
-- View gate pass details
-- View gate pass status
-- View gate pass history
-- Generate and display QR code after approval
-- Logout
+-   Student registration and login
+-   View personal profile
+-   Apply for a gate pass
+-   Enter:
+    -   Exit date and time
+    -   Return date and time
+    -   Place
+    -   Reason
+    -   Description
+-   View submitted gate passes
+-   View gate pass details
+-   View gate pass status
+-   View gate pass history
+-   Generate and display QR code after approval
+-   Logout
 
 ### 👨‍👩‍👦 Parent
 
-- Parent registration and login
-- View child's information
-- View child's gate pass requests
-- Approve gate pass
-- Reject gate pass
-- View gate pass details
-- View gate pass history
-- View profile
-- Logout
+-   Parent registration and login
+-   View child's information
+-   View child's gate pass requests
+-   Approve gate pass
+-   Reject gate pass
+-   View gate pass details
+-   View gate pass history
+-   View profile
+-   Logout
 
 ### 👨‍🏫 Rector
 
-- Rector login
-- View all gate pass requests
-- Approve gate pass
-- Reject gate pass
-- View gate pass details
-- View gate pass history
-- View profile
-- Logout
+-   Rector login
+-   View all gate pass requests
+-   Approve gate pass
+-   Reject gate pass
+-   View gate pass details
+-   View gate pass history
+-   View profile
+-   Logout
 
 ### 🛡️ Security Guard
 
-- Security guard login
-- Scan student QR code
-- Verify approved gate pass
-- Record student **EXIT**
-- Record student **ENTRY**
-- View gate records/history
-- View profile
-- Logout
+-   Security guard login
+-   Scan student QR code
+-   Verify approved gate pass
+-   Record student **EXIT**
+-   Record student **ENTRY**
+-   View gate records/history
+-   View profile
+-   Logout
 
 ### 👨‍💼 Admin
 
-- Admin login
-- View total users
-- View total gate passes
-- Access user management
-- Access gate pass management
-- Logout
+-   Admin login
+-   View total users
+-   View total gate passes
+-   Access user management
+-   Access gate pass management
+-   Link parents with students
+-   Logout
 
----
+------------------------------------------------------------------------
 
 ## 🔄 Gate Pass Workflow
 
-```text
+``` text
 Student
    │
    ▼
@@ -122,55 +129,55 @@ Parent Approval ──────┐
                 COMPLETED
 ```
 
----
+------------------------------------------------------------------------
 
 ## 📊 Gate Pass Status
 
-| Status | Description |
-|---|---|
-| `PENDING` | Gate pass is waiting for approval |
-| `PARTIALLY_APPROVED` | One authority has approved |
-| `APPROVED` | Parent and Rector have approved |
-| `REJECTED` | Gate pass has been rejected |
-| `ACTIVE` | Student has exited the hostel |
-| `COMPLETED` | Student has returned |
-| `EXPIRED` | Gate pass is no longer valid |
+  Status                 Description
+  ---------------------- -----------------------------------
+  `PENDING`              Gate pass is waiting for approval
+  `PARTIALLY_APPROVED`   One authority has approved
+  `APPROVED`             Parent and Rector have approved
+  `REJECTED`             Gate pass has been rejected
+  `ACTIVE`               Student has exited the hostel
+  `COMPLETED`            Student has returned
+  `EXPIRED`              Gate pass is no longer valid
 
----
+------------------------------------------------------------------------
 
 ## 🛠️ Technologies Used
 
 ### Frontend
 
-- Kotlin
-- XML
-- Android Studio
-- Material Design
-- RecyclerView
-- Material Components
+-   Kotlin
+-   XML
+-   Android Studio
+-   Material Design
+-   RecyclerView
+-   Material Components
 
 ### Backend / Database
 
-- Firebase Authentication
-- Cloud Firestore
+-   Firebase Authentication
+-   Cloud Firestore
 
 ### QR Code
 
-- ZXing
-- JourneyApps ZXing Android Embedded
+-   ZXing
+-   JourneyApps ZXing Android Embedded
 
 ### Development Tools
 
-- Android Studio
-- Gradle
-- Git
-- GitHub
+-   Android Studio
+-   Gradle
+-   Git
+-   GitHub
 
----
+------------------------------------------------------------------------
 
 ## 📦 Main Dependencies
 
-```gradle
+``` gradle
 Firebase BoM: 34.5.0
 Firebase Authentication
 Firebase Firestore
@@ -178,7 +185,7 @@ ZXing Core: 3.5.3
 ZXing Android Embedded: 4.3.0
 ```
 
----
+------------------------------------------------------------------------
 
 ## 🗂️ Main Firebase Collections
 
@@ -186,9 +193,7 @@ ZXing Android Embedded: 4.3.0
 
 Stores user information.
 
-Example:
-
-```text
+``` text
 users
  └── userId
       ├── uid
@@ -200,7 +205,7 @@ users
 
 Roles:
 
-```text
+``` text
 student
 parent
 rector
@@ -212,7 +217,7 @@ admin
 
 Stores student gate pass requests.
 
-```text
+``` text
 gatePasses
  └── gatePassId
       ├── studentId
@@ -237,7 +242,7 @@ gatePasses
 
 Stores security entry and exit records.
 
-```text
+``` text
 gateRecords
  └── recordId
       ├── gatePassId
@@ -247,64 +252,120 @@ gateRecords
       └── timestamp
 ```
 
----
+------------------------------------------------------------------------
 
-## 📱 Application Screens
+# 📸 Application Screenshots
 
-### Authentication
+> **Upload your screenshots into the `screenshots` folder of the GitHub
+> repository using the filenames shown below.**
 
-- Login
-- Student Signup
-- Parent Signup
+## 🔐 Authentication
 
-### Student Module
+### Login
 
-- Student Dashboard
-- Apply Gate Pass
-- My Gate Passes
-- Gate Pass Details
-- Student History
-- Student Profile
 
-### Parent Module
+### Student Signup
 
-- Parent Dashboard
-- Child Gate Passes
-- Gate Pass Details
-- Parent History
-- Parent Profile
 
-### Rector Module
+### Parent Signup
 
-- Rector Dashboard
-- Gate Pass Requests
-- Gate Pass Details
-- Rector History
-- Rector Profile
 
-### Security Module
+------------------------------------------------------------------------
 
-- Security Dashboard
-- QR Scanner
-- Scanned Gate Pass
-- Security History
-- Security Profile
+## 👨‍🎓 Student Module
 
-### Admin Module
+### Student Dashboard
 
-- Admin Dashboard
-- User Management
-- Gate Pass Management
 
----
+### Apply Gate Pass
+
+
+### My Gate Passes
+
+
+### Gate Pass Details / QR Code
+
+
+### Student History
+
+
+### Student Profile
+
+
+------------------------------------------------------------------------
+
+## 👨‍👩‍👦 Parent Module
+
+### Parent Dashboard
+
+
+### Child Gate Passes
+
+
+### Parent History
+
+
+### Parent Profile
+
+
+------------------------------------------------------------------------
+
+## 👨‍🏫 Rector Module
+
+### Rector Dashboard
+
+
+### Gate Pass Requests
+
+
+### Rector History
+
+
+### Rector Profile
+
+
+------------------------------------------------------------------------
+
+## 🛡️ Security Guard Module
+
+### Security Dashboard
+
+
+### QR Scanner
+
+
+### Scanned Gate Pass
+
+
+### Security History
+
+
+### Security Profile
+
+
+------------------------------------------------------------------------
+
+## 👨‍💼 Admin Module
+
+### Admin Dashboard
+
+
+### User Management
+
+
+### Gate Pass Management
+
+
+------------------------------------------------------------------------
 
 ## 🔐 Authentication
 
 HostelPass uses **Firebase Authentication with Email and Password**.
 
-After login, the application checks the user's role from Firestore and automatically opens the appropriate dashboard.
+After login, the application checks the user's role from Firestore and
+automatically opens the appropriate dashboard.
 
-```text
+``` text
 Login
   │
   ▼
@@ -320,13 +381,14 @@ Get User Role
   └── Admin    → Admin Dashboard
 ```
 
----
+------------------------------------------------------------------------
 
 ## 📷 QR Code System
 
-After both the **Parent** and **Rector** approve a gate pass, the gate pass becomes:
+After both the **Parent** and **Rector** approve a gate pass, the gate
+pass becomes:
 
-```text
+``` text
 APPROVED
 ```
 
@@ -336,7 +398,7 @@ The security guard scans the QR code.
 
 ### First Scan
 
-```text
+``` text
 APPROVED → ACTIVE
 ```
 
@@ -344,17 +406,17 @@ An `EXIT` record is created.
 
 ### Second Scan
 
-```text
+``` text
 ACTIVE → COMPLETED
 ```
 
 An `ENTRY` record is created.
 
----
+------------------------------------------------------------------------
 
 ## 📂 Project Structure
 
-```text
+``` text
 Mad_Project_24012011013
 │
 ├── app
@@ -385,13 +447,13 @@ Mad_Project_24012011013
 └── README.md
 ```
 
----
+------------------------------------------------------------------------
 
 ## 🚀 How to Run the Project
 
 ### 1. Clone the Repository
 
-```bash
+``` bash
 git clone https://github.com/yash318/Mad_Project_Gatepass_24012011013.git
 ```
 
@@ -405,7 +467,7 @@ The project uses Firebase Authentication and Cloud Firestore.
 
 Make sure the Firebase configuration file is available:
 
-```text
+``` text
 app/google-services.json
 ```
 
@@ -413,7 +475,7 @@ app/google-services.json
 
 In Android Studio:
 
-```text
+``` text
 File → Sync Project with Gradle Files
 ```
 
@@ -423,39 +485,43 @@ Connect an Android device or start an Android Emulator.
 
 Then click:
 
-```text
+``` text
 ▶ Run
 ```
 
----
+------------------------------------------------------------------------
 
 ## 🔑 Demo Roles
 
 The application supports the following roles:
 
-| Role | Purpose |
-|---|---|
-| Student | Apply and track gate passes |
-| Parent | Approve/reject child's gate pass |
-| Rector | Approve/reject gate passes |
-| Security | Scan QR and record entry/exit |
-| Admin | Manage and monitor the system |
+  Role       Purpose
+  ---------- ----------------------------------
+  Student    Apply and track gate passes
+  Parent     Approve/reject child's gate pass
+  Rector     Approve/reject gate passes
+  Security   Scan QR and record entry/exit
+  Admin      Manage and monitor the system
 
-> **Note:** Firebase credentials should not be stored publicly in the README. Create test users through Firebase Authentication when setting up the project.
+> **Note:** Firebase credentials should not be stored publicly in the
+> README. Create test users through Firebase Authentication when setting
+> up the project.
 
----
+------------------------------------------------------------------------
 
 ## 🔒 Security
 
-The application uses Firebase Authentication for user authentication and Cloud Firestore for storing application data.
+The application uses Firebase Authentication for user authentication and
+Cloud Firestore for storing application data.
 
-User roles are stored in Firestore and are used for role-based navigation.
+User roles are stored in Firestore and are used for role-based
+navigation.
 
----
+------------------------------------------------------------------------
 
 ## 🎓 Academic Project
 
-**Project:** HostelPass — Smart Hostel Gate Pass Management System
+**Project:** HostelPass --- Smart Hostel Gate Pass Management System
 
 **Technology:** Android / Kotlin / Firebase
 
@@ -469,31 +535,35 @@ User roles are stored in Firestore and are used for role-based navigation.
 
 **College:** U. V. Patel College of Engineering, Ganpat University
 
----
+------------------------------------------------------------------------
 
 ## 📌 Future Enhancements
 
 The following features can be added in future versions:
 
-- Push notifications using Firebase Cloud Messaging
-- Automatic late-return alerts
-- Profile pictures
-- Advanced gate pass filtering
-- Reports and statistics
-- PDF/Excel report generation
-- Improved admin user management
-- Digital attendance integration
-- Emergency contact notifications
+-   Push notifications using Firebase Cloud Messaging
+-   Automatic late-return alerts
+-   Profile pictures
+-   Advanced gate pass filtering
+-   Reports and statistics
+-   PDF/Excel report generation
+-   Improved admin user management
+-   Digital attendance integration
+-   Emergency contact notifications
 
----
+------------------------------------------------------------------------
 
 ## ⭐ Conclusion
 
-**HostelPass** provides a digital solution for managing hostel gate passes. It connects students, parents, rectors, and security guards through a single Android application.
+**HostelPass** provides a digital solution for managing hostel gate
+passes. It connects students, parents, rectors, and security guards
+through a single Android application.
 
-The system improves the gate pass process by replacing manual paperwork with **Firebase-based digital records, role-based access, approval workflows, and QR-based entry/exit tracking**.
+The system improves the gate pass process by replacing manual paperwork
+with **Firebase-based digital records, role-based access, approval
+workflows, and QR-based entry/exit tracking**.
 
----
+------------------------------------------------------------------------
 
 ## 📜 License
 
