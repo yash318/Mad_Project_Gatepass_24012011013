@@ -322,10 +322,6 @@ gateRecords
 
 ![Gate Pass Requests](screenshots/gate_pass_requests.png)
 
-### Rector History
-
-![Rector History](screenshots/rector_history.png)
-
 ### Rector Profile
 
 ![Rector Profile](screenshots/rector_profile.png)
@@ -338,21 +334,9 @@ gateRecords
 
 ![Security Dashboard](screenshots/security_dashboard.png)
 
-### QR Scanner
-
-![QR Scanner](screenshots/qr_scanner.png)
-
-### Scanned Gate Pass
-
-![Scanned Gate Pass](screenshots/scanned_gate_pass.png)
-
 ### Security History
 
 ![Security History](screenshots/security_history.png)
-
-### Security Profile
-
-![Security Profile](screenshots/security_profile.png)
 
 ------------------------------------------------------------------------
 
@@ -366,9 +350,6 @@ gateRecords
 
 ![User Management](screenshots/user_management.png)
 
-### Gate Pass Management
-
-![Gate Pass Management](screenshots/gate_pass_management.png)
 
 
 ------------------------------------------------------------------------
