@@ -263,14 +263,9 @@ gateRecords
 
 ![Login Screen](screenshots/login.png)
 
-### Student Signup
+### Signup
 
 ![Student Signup](screenshots/student_signup.png)
-
-### Parent Signup
-
-![Parent Signup](screenshots/parent_signup.png)
-
 
 ------------------------------------------------------------------------
 
