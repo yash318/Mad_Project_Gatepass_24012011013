@@ -307,10 +307,6 @@ gateRecords
 
 ![Child Gate Passes](screenshots/child_gate_passes.png)
 
-### Parent History
-
-![Parent History](screenshots/parent_history.png)
-
 ### Parent Profile
 
 ![Parent Profile](screenshots/parent_profile.png)
