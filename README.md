@@ -256,18 +256,22 @@ gateRecords
 
 # 📸 Application Screenshots
 
-> **Upload your screenshots into the `screenshots` folder of the GitHub
-> repository using the filenames shown below.**
+
+## 🔐 Authentication
 
 ## 🔐 Authentication
 
 ### Login
 
+![Login Screen](screenshots/login.png)
 
 ### Student Signup
 
+![Student Signup](screenshots/student_signup.png)
 
 ### Parent Signup
+
+![Parent Signup](screenshots/parent_signup.png)
 
 
 ------------------------------------------------------------------------
@@ -276,21 +280,27 @@ gateRecords
 
 ### Student Dashboard
 
+![Student Dashboard](screenshots/student_dashboard.png)
 
 ### Apply Gate Pass
 
+![Apply Gate Pass](screenshots/apply_gate_pass.png)
 
 ### My Gate Passes
 
+![My Gate Passes](screenshots/my_gate_passes.png)
 
 ### Gate Pass Details / QR Code
 
+![Gate Pass Details](screenshots/gate_pass_details.png)
 
 ### Student History
 
+![Student History](screenshots/student_history.png)
 
 ### Student Profile
 
+![Student Profile](screenshots/student_profile.png)
 
 ------------------------------------------------------------------------
 
@@ -298,31 +308,38 @@ gateRecords
 
 ### Parent Dashboard
 
+![Parent Dashboard](screenshots/parent_dashboard.png)
 
 ### Child Gate Passes
 
+![Child Gate Passes](screenshots/child_gate_passes.png)
 
 ### Parent History
 
+![Parent History](screenshots/parent_history.png)
 
 ### Parent Profile
 
-
+![Parent Profile](screenshots/parent_profile.png)
 ------------------------------------------------------------------------
 
 ## 👨‍🏫 Rector Module
 
 ### Rector Dashboard
 
+![Rector Dashboard](screenshots/rector_dashboard.png)
 
 ### Gate Pass Requests
 
+![Gate Pass Requests](screenshots/gate_pass_requests.png)
 
 ### Rector History
 
+![Rector History](screenshots/rector_history.png)
 
 ### Rector Profile
 
+![Rector Profile](screenshots/rector_profile.png)
 
 ------------------------------------------------------------------------
 
@@ -330,18 +347,23 @@ gateRecords
 
 ### Security Dashboard
 
+![Security Dashboard](screenshots/security_dashboard.png)
 
 ### QR Scanner
 
+![QR Scanner](screenshots/qr_scanner.png)
 
 ### Scanned Gate Pass
 
+![Scanned Gate Pass](screenshots/scanned_gate_pass.png)
 
 ### Security History
 
+![Security History](screenshots/security_history.png)
 
 ### Security Profile
 
+![Security Profile](screenshots/security_profile.png)
 
 ------------------------------------------------------------------------
 
@@ -349,11 +371,15 @@ gateRecords
 
 ### Admin Dashboard
 
+![Admin Dashboard](screenshots/admin_dashboard.png)
 
 ### User Management
 
+![User Management](screenshots/user_management.png)
 
 ### Gate Pass Management
+
+![Gate Pass Management](screenshots/gate_pass_management.png)
 
 
 ------------------------------------------------------------------------
